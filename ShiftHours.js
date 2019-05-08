@@ -38,10 +38,6 @@ shiftGroups =
             F8: 6
         },
 
-        {
-            X1: 10,
-            X2: 5
-        }
     ]
 
 let shiftToHours =
