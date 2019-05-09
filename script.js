@@ -19,8 +19,9 @@ Add = (e) => {
     totalHours += shiftToHours[e.id]
     document.querySelector("#hours").innerHTML = totalHours
     let node = document.createElement("LI")
-    node.innerHTML = e.id + " (" + shiftToHours[e.id] + " hours)" +
-        `<div class="btn btn-danger" id=shift${id} onClick=deleteShift(${e.id}, ${id})">Delete Shift<div/>`
+    node.innerHTML = e.id + " (" + shiftToHours[e.id] + " hours)"
+    //  +
+    //     `<div class="btn btn-danger" id=shift${id} onClick=deleteShift('${e.id}' '${id}')` + ">Delete Shift<div/>"
     document.querySelector("#list").appendChild(node)
     id++;
 
