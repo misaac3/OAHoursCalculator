@@ -19,9 +19,18 @@ Add = (e) => {
     totalHours += shiftToHours[e.id]
     document.querySelector("#hours").innerHTML = totalHours
     let node = document.createElement("LI")
-    node.innerHTML = e.id + " (" + shiftToHours[e.id] + " hours)"
+    node.innerHTML = e.id + " (" + shiftToHours[e.id] + " hours)" +
+        `<div class="btn btn-danger" id=shift${id} onClick=deleteShift(${e.id}, ${id})">Delete Shift<div/>`
     document.querySelector("#list").appendChild(node)
+    id++;
 
+
+}
+
+deleteShift = (shift, id) => {
+    total -= shiftToHours[shift]
+    let ht = document.querySelector("#shift" + id).outerHTML
+    document.querySelector("#shift" + id).outerHTML = "<strike>" + ht + "</strike>"
 
 }
 
@@ -29,12 +38,13 @@ document.getElementById("clear").addEventListener('click', () => {
     totalHours = 0
     document.querySelector("#hours").innerHTML = 0
     document.querySelector("#list").innerHTML = ""
+    id = 0;
 
 
 })
 
 
-
+let id = 0
 makeBtns()
 
 totalHours = 0;

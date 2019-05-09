@@ -21,7 +21,7 @@ shiftGroups =
         },
         {
             FB1: 6,
-            FB2: 6,
+            FB2: 4.25,
             FB3: 5,
             FB4: 5,
             FB5: 5,
@@ -61,7 +61,7 @@ let shiftToHours =
     FA9: 3,
 
     FB1: 6,
-    FB2: 6,
+    FB2: 4.25,
     FB3: 5,
     FB4: 5,
     FB5: 5,
